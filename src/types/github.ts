@@ -18,4 +18,5 @@ export interface GithubRepo {
     forks_count: number;
     language: string;
     updated_at: string;
+    watchers_count: number;
 }
