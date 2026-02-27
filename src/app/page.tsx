@@ -8,6 +8,8 @@ import { useGithubUser } from "@/hooks/useGithubUser";
 import { useGithubRepos } from "@/hooks/useGithubRepos";
 import LanguageChart from "@/components/github/LanguageChart";
 import { getLanguageStats } from "@/utils/languageStats";
+import RepoStats from "@/components/github/RepoStats";
+import { getRepoAnalytics } from "@/utils/repoAnalytics";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -17,6 +19,9 @@ export default function Home() {
   const languageStats = repoQuery.data
     ? getLanguageStats(repoQuery.data)
     : [];
+  const analytics = repoQuery.data
+    ? getRepoAnalytics(repoQuery.data)
+    : null;
 
   return (
     <main className="flex flex-col items-center gap-6 p-10">
@@ -27,6 +32,8 @@ export default function Home() {
       {userQuery.isLoading && <p>Loading profile...</p>}
       {userQuery.isError && <p className="text-red-500">User not found</p>}
       {userQuery.data && <UserCard user={userQuery.data} />}
+
+      {analytics && <RepoStats analytics={analytics} />}
 
       {repoQuery.isLoading && <p>Loading repos...</p>}
       {repoQuery.data && <RepoTable repos={repoQuery.data} />}
