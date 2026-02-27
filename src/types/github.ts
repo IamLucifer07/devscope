@@ -8,6 +8,7 @@ export interface GithubUser {
     public_repos: number;
     location: string;
     created_at: string;
+    html_url: string;
 }
 
 export interface GithubRepo {
