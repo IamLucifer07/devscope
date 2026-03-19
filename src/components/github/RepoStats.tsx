@@ -25,7 +25,7 @@ export default function RepoStats({
 
 function StatCard({ title, value, icon: Icon, color }: { title: string; value: string; icon: any; color: string }) {
     return (
-        <div className="bg-card border border-border/50 rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+        <div className="bg-card border border-border/50 rounded-xl p-4 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
             <div className="flex items-start justify-between">
                 <div className="min-w-0 flex-1">
                     <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{title}</p>
