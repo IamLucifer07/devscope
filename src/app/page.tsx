@@ -26,7 +26,7 @@ export default function Home() {
     : null;
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden transition-colors duration-300">
+    <div className="min-h-screen bg-background relative p-2 overflow-hidden transition-colors duration-300">
       {/* Background decoration */}
       <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none -z-10" />
 
