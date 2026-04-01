@@ -15,7 +15,7 @@ export default function UserCard({ user }: { user: GithubUser }) {
                         className="w-24 h-24 rounded-full ring-4 ring-background shadow-md object-cover"
                     />
                     <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-full border-2 border-background">
-                        PRO
+                        Pro
                     </div>
                 </div>
 
