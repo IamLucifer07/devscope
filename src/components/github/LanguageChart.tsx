@@ -33,7 +33,7 @@ export default function LanguageChart({ data }: LanguageChartProps) {
     const currentTheme = theme === "system" ? systemTheme : theme;
     const isDark = currentTheme === "dark";
 
-    const textColor = isDark ? "#94a3b8" : "#64748b"; // muted-foreground
+    const textColor = isDark ? "#94a3b8" : "#64748b"; // muted
     const gridColor = isDark ? "#1e293b" : "#e2e8f0"; // border
     const tooltipBg = isDark ? "#0f172a" : "#ffffff";
     const tooltipBorder = isDark ? "#1e293b" : "#e2e8f0";
